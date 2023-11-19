@@ -99,7 +99,7 @@ if __name__ == "__main__":
                 print(f"Word list has been updated with {words_added} new words.")
 
         print()
-        if input("Would you like to provide alternate translations \nfor any other code words? [y/n]: ").lower() == 'y':
+        if input("Would you like to provide alternate translations \nfor any other (non-listed) code words? [y/n]: ").lower() == 'y':
             
             words_added = 0
             while True:
