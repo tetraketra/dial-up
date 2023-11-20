@@ -88,9 +88,10 @@ if __name__ == "__main__":
                             print(f"Invalid translation (\"{code_word}\" != \"{word_to_encoded(translation)}\"). Please try again.")
                             continue
 
-                        encodings[code_word].append(translation)
-                        words_added += 1
-                        break
+                        if translation not in encodings[code_word]:
+                            encodings[code_word].append(translation)
+                            words_added += 1
+                            break
 
             if words_added:
                 with open("word_list.json", 'w') as f:
@@ -99,25 +100,23 @@ if __name__ == "__main__":
                 print(f"Word list has been updated with {words_added} new words.")
 
         print()
-        if input("Would you like to provide alternate translations \nfor any other (non-listed) code words? [y/n]: ").lower() == 'y':
-            
+        if input("Would you like to add any additional words to the corpus? [y/n]: ").lower() == 'y':
+            print()
             words_added = 0
             while True:
 
-                print()
-                code_word = input("Enter code word, or leave blank to stop: ").strip()
-                if not code_word: break
+                word = input("Enter word, or leave blank to stop: ").strip().lower()
+                if not word: break
 
-                translation = input("Enter translation: ").strip().lower()
                 for c in "'\"~!@#$%^&*()_+\{\}|:<>?/,.;":
-                    translation = translation.replace(c, "")
+                    word = word.replace(c, "")
+                code_word = word_to_encoded(word)
 
-                if word_to_encoded(translation) != code_word:
-                    print(f"Invalid translation (\"{code_word}\" != \"{word_to_encoded(translation)}\"). Please try again.")
-                    continue
-
-                encodings[code_word].append(translation)
-                words_added += 1
+                if word not in encodings[code_word]:
+                    encodings[code_word].append(word)
+                    words_added += 1
+                else:
+                    print("This word is already in the corpus!")
 
             if words_added:
                 with open("word_list.json", 'w') as f:
