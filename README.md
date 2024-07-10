@@ -11,7 +11,7 @@ You do not need to build an environment.
 ```html
 dial-up
 ├── words # The base words the app uses to build its corpus.
-│   └── *-letter-word.json 
+│   └── [ℤ++]-letter-word.json 
 ├── dial_up.py       # The app. Run as script.
 ├── pyproject.toml   # Linting config.
 ├── requirements.txt # Empty ^.^
