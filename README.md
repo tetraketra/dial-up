@@ -5,8 +5,6 @@ Supports punctuation, variable capitalization, and messages of arbitrary length.
 This app is intentionally built to use no dependencies. 
 You do not need to build an environment.
 
----
-
 # 🏗️ Project Structure 🏗️
 ```html
 dial-up
@@ -19,8 +17,6 @@ dial-up
 │=─ word_list.json   # App corpus. Built when needed.
 └=─ log.txt          # App log. Built when needed.
 ```
-
----
 
 # 🛠️ Run Process 🛠️
 ```sh
