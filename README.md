@@ -1,4 +1,4 @@
-# 📞 Dial-Up 📞
+# 📞 Dial Up 📞
 
 Command-line encoder and decoder for an unnamed nondeterministic phone-dialpad-based code.
 Supports punctuation, variable capitalization, and messages of arbitrary length.
