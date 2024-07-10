@@ -1,6 +1,6 @@
 # 📞 Dial-Up 📞
 
-Command-line [en/de]coder for an unnamed nondeterministic phone-dialpad-based code.
+Command-line encoder and decoder for an unnamed nondeterministic phone-dialpad-based code.
 Supports punctuation, variable capitalization, and messages of arbitrary length.
 This app is intentionally built to use no dependencies. 
 You do not need to build an environment.
@@ -10,8 +10,8 @@ You do not need to build an environment.
 # 🏗️ Project Structure 🏗️
 ```html
 dial-up
-├── words
-│   └── # The base words the app uses to build its corpus.
+├── words # The base words the app uses to build its corpus.
+│   └── *-letter-word.json 
 ├── dial_up.py       # The app. Run as script.
 ├── pyproject.toml   # Linting config.
 ├── requirements.txt # Empty ^.^
