@@ -1,3 +1,7 @@
+# Python
 *.venv
+__pycache__
+
+# Local Files
 log.txt
 word_list.json
