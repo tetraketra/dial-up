@@ -9,7 +9,7 @@ def word_to_encoded(word: str) -> str:
     return "".join([let_to_num[letter] for letter in word])
 
 
-def chunk_words(strings, max_length):
+def chunk_words(strings: list[str], max_length: int):
     chunks = []
     current_chunk = []
 
